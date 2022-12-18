@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { CircleProgressComponent } from './circle-progress/circle-progress.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CircleProgressComponent
+    CircleProgressComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
