@@ -11,6 +11,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { EducationComponent } from './components/education/education.component';
 import { LanguagesComponent } from './components/languages/languages.component';
 import { SoftskillsComponent } from './components/softskills/softskills.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 
 
@@ -22,7 +23,8 @@ import { SoftskillsComponent } from './components/softskills/softskills.componen
     ExperienceComponent,
     EducationComponent,
     LanguagesComponent,
-    SoftskillsComponent
+    SoftskillsComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
