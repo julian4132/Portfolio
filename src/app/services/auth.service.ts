@@ -1,0 +1,23 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  url = "http://localhost";
+  currentUserSubject: BehaviorSubject<any>;
+  constructor(private http:HttpClient) { 
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
+  }
+
+  Login(credentials: any):Observable<any>
+  {
+    return this.http.post(this.url, credentials).pipe(map(data=>{
+      sessionStorage.setItem('currentUser', JSON.stringify(data));
+      return data;
+    }))
+  }
+}
