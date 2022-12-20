@@ -12,6 +12,8 @@ import { EducationComponent } from './components/education/education.component';
 import { LanguagesComponent } from './components/languages/languages.component';
 import { SoftskillsComponent } from './components/softskills/softskills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -24,13 +26,15 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     EducationComponent,
     LanguagesComponent,
     SoftskillsComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
