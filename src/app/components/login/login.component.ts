@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder, private auth:AuthService/*, private route:Router*/) {
+  constructor(private formBuilder:FormBuilder, private auth:AuthService, private route:Router) {
     this.form = this.formBuilder.group({
       email:['',[Validators.required, Validators.email]],
       password:['',[Validators.required, Validators.minLength(8)]],
@@ -36,11 +36,12 @@ export class LoginComponent implements OnInit {
 
   onSubmit(event: Event){
     event.preventDefault();
+
     this.auth.Login(this.form.value).subscribe(data => {
       console.log("DATA" + JSON.stringify(data));
     });
     
-    //this.route.navigate(['portfolio']);
+    this.route.navigate(['/portfolio']);
   }
 
 
