@@ -16,11 +16,6 @@ export class RegisterComponent implements OnInit {
       username:['',[Validators.required]],
       email:['',[Validators.required, Validators.email]],
       password:['',[Validators.required, Validators.minLength(8)]],
-      deviceInfo:this.formBuilder.group({
-        deviceId: ["24563455"],
-        deviceType: ["DEVICE_TYPE_ANDROID"],
-        notificationToken:["2356345fsfdg"]
-      })
     });
    }
 
