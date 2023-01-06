@@ -14,7 +14,8 @@ import { SoftskillsComponent } from './components/softskills/softskills.componen
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './components/register/register.component'
 
 
 
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http'
     LanguagesComponent,
     SoftskillsComponent,
     PortfolioComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

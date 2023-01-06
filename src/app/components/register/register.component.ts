@@ -4,18 +4,18 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   form:FormGroup;
   constructor(private formBuilder:FormBuilder, private auth:AuthService, private route:Router) {
     this.form = this.formBuilder.group({
-      username:['', []],
-      email:['',[/*Validators.required, Validators.email*/]],
-      password:['',[/*Validators.required, Validators.minLength(8)*/]],
+      username:['',[Validators.required]],
+      email:['',[Validators.required, Validators.email]],
+      password:['',[Validators.required, Validators.minLength(8)]],
       deviceInfo:this.formBuilder.group({
         deviceId: ["24563455"],
         deviceType: ["DEVICE_TYPE_ANDROID"],
@@ -47,6 +47,5 @@ export class LoginComponent implements OnInit {
       this.route.navigate(['/portfolio']);
     });
   }
-
 
 }
