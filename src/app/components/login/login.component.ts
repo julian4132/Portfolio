@@ -39,9 +39,8 @@ export class LoginComponent implements OnInit {
 
     this.auth.Login(this.form.value).subscribe(data => {
       console.log("DATA" + JSON.stringify(data));
+      this.route.navigate(['/portfolio']);
     });
-    
-    this.route.navigate(['/portfolio']);
   }
 
 

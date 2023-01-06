@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  url = "http://npinti.ddns.net:9008/api/auth/login";
+  url = "http://localhost:8080/users";
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) { 
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'))
