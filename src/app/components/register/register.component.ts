@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { SignupService } from 'src/app/services/signup.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class RegisterComponent implements OnInit {
 
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder, private auth:AuthService, private route:Router) {
+  constructor(private formBuilder:FormBuilder, private signup:SignupService, private route:Router) {
     this.form = this.formBuilder.group({
       username:['',[Validators.required]],
       email:['',[Validators.required, Validators.email]],
@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(event: Event){
     event.preventDefault();
 
-    this.auth.Login(this.form.value).subscribe(data => {
+    this.signup.Signup(this.form.value).subscribe(data => {
       console.log("DATA" + JSON.stringify(data));
       this.route.navigate(['/portfolio']);
     });
