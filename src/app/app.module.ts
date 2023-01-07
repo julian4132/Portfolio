@@ -14,8 +14,10 @@ import { SoftskillsComponent } from './components/softskills/softskills.componen
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './components/register/register.component'
+import { FetchPortfolioDataService } from './services/fetch-portfolio-data.service';
+import { InterceptorService } from './services/interceptor.service';
 
 
 
@@ -40,7 +42,9 @@ import { RegisterComponent } from './components/register/register.component'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [FetchPortfolioDataService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
