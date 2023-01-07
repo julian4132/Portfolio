@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  url = "http://localhost:8080/register";
+  url = "http://localhost:8080/authenticate";
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) { 
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'))
