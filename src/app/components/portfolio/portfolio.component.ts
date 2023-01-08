@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchPortfolioDataService } from 'src/app/services/fetch-portfolio-data.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  portfolioData:any;
+  constructor(private dataService:FetchPortfolioDataService) { }
 
   ngOnInit(): void {
+    this.dataService.fetchData().subscribe(
+      data => {
+        console.log(data);
+        this.portfolioData=data;
+      }
+    );
   }
 
 }
