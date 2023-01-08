@@ -10,6 +10,6 @@ export class FetchPortfolioDataService {
   constructor(private http:HttpClient) {}
 
   fetchData():Observable<any>{
-    return this.http.get<any>(this.url);
+    return this.http.post(this.url, "");
   }
 }
