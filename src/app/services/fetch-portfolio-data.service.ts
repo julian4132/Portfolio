@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Constants } from '../common/global-constants/global-constants.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FetchPortfolioDataService {
-  url:string="http://localhost:8080/data"
+  url:string=Constants.API_ENDPOINT+"/data"
   constructor(private http:HttpClient) {}
 
   fetchData():Observable<any>{
