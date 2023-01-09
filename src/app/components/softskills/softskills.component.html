@@ -1,12 +1,13 @@
+<div class="softskills-background">
+  <h1 class="big-section-title">Habilidades blandas</h1>
 
-<h1 class="big-section-title">Habilidades blandas</h1>
+
+  <div class="circular-progress">
+    <span class="progress-value">0%</span>
+  </div>
 
 
-<div class="circular-progress">
-  <span class="progress-value">0%</span>
+  <circle-progress [progress]="progressbarValue"></circle-progress>
+
+  <button mat-raised-button (click)="startTimer(60)">Start timer ({{curSec}})</button>
 </div>
-
-
-<circle-progress [progress]="progressbarValue"></circle-progress>
-
-<button mat-raised-button (click)="startTimer(60)">Start timer ({{curSec}})</button>
