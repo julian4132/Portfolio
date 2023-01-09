@@ -20,6 +20,7 @@ import { FetchPortfolioDataService } from './services/fetch-portfolio-data.servi
 import { InterceptorService } from './services/interceptor.service';
 import { MatCardModule } from '@angular/material/card';
 import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
+import { PortfolioItemListComponent } from './components/portfolio-item-list/portfolio-item-list.component';
 
 
 
@@ -35,7 +36,8 @@ import { PortfolioItemComponent } from './components/portfolio-item/portfolio-it
     PortfolioComponent,
     LoginComponent,
     RegisterComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    PortfolioItemListComponent
   ],
   imports: [
     BrowserModule,
