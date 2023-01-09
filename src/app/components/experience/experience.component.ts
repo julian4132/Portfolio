@@ -16,7 +16,7 @@ export class ExperienceComponent implements OnInit {
                     "subtitle":"Desarrollador fullstack - Práctica profesional",
                     "description":"Completar",
                     "extraInfo": "Junio 2022 - Noviembre 2022"},
-                    {"title":"Profile",
+                    {"title":"Profile2",
                     "subtitle":"Desarrollador fullstack - Práctica profesional",
                     "description":"Completar",
                     "extraInfo": "Junio 2022 - Noviembre 2022"},

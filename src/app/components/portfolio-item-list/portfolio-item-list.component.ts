@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+
 
 @Component({
   selector: 'app-portfolio-item-list',
@@ -16,5 +18,10 @@ export class PortfolioItemListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.items, event.previousIndex, event.currentIndex);
+  }
+
 
 }
