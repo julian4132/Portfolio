@@ -8,6 +8,15 @@ import { MatCardModule } from '@angular/material/card'
 })
 export class ExperienceComponent implements OnInit {
 
+  experienceProps: {title:string,
+                    subtitle:string,
+                    description:string,
+                    extraInfo:string}=
+                   {"title":"Profile",
+                    "subtitle":"Desarrollador fullstack - Práctica profesional",
+                    "description":"Completar",
+                    "extraInfo": "Junio 2022 - Noviembre 2022"};
+
   constructor() { }
 
   ngOnInit(): void {

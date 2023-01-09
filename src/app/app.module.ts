@@ -19,6 +19,7 @@ import { RegisterComponent } from './components/register/register.component'
 import { FetchPortfolioDataService } from './services/fetch-portfolio-data.service';
 import { InterceptorService } from './services/interceptor.service';
 import { MatCardModule } from '@angular/material/card';
+import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
 
 
 
@@ -33,7 +34,8 @@ import { MatCardModule } from '@angular/material/card';
     SoftskillsComponent,
     PortfolioComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PortfolioItemComponent
   ],
   imports: [
     BrowserModule,
