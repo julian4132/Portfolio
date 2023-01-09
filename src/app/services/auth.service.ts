@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Constants } from '../common/global-constants/global-constants.component';
+import { Constants } from '../common/global-constants/global-constants';
 
 @Injectable({
   providedIn: 'root'
