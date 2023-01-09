@@ -18,6 +18,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './components/register/register.component'
 import { FetchPortfolioDataService } from './services/fetch-portfolio-data.service';
 import { InterceptorService } from './services/interceptor.service';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -40,7 +41,8 @@ import { InterceptorService } from './services/interceptor.service';
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [FetchPortfolioDataService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
