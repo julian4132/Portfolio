@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-portfolio-item',
   templateUrl: './portfolio-item.component.html',

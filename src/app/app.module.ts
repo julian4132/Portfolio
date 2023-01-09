@@ -21,6 +21,7 @@ import { InterceptorService } from './services/interceptor.service';
 import { MatCardModule } from '@angular/material/card';
 import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
 import { PortfolioItemListComponent } from './components/portfolio-item-list/portfolio-item-list.component';
+import { MatIconModule } from '@angular/material/icon'
 
 
 
@@ -46,7 +47,8 @@ import { PortfolioItemListComponent } from './components/portfolio-item-list/por
     MatButtonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
   providers: [FetchPortfolioDataService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
