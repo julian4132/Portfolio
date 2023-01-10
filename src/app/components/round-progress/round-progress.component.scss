@@ -1,0 +1,41 @@
+:root {
+    --angle: 3.6deg;
+}
+
+.softskills-background{
+    background-color: rgb(70, 20, 106);
+    padding-top: 80px;
+}
+
+.big-section-title{
+    color:azure;
+    font-size: 40px!important;
+    padding-left: 20px;
+}
+
+.circular-progress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 var(--angle), #ededed 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.progress-value{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #7d2ae8;
+}

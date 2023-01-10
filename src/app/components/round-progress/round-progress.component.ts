@@ -24,6 +24,7 @@ export class RoundProgressComponent implements OnInit {
     this.observer = new IntersectionObserver( entries => {
       if(entries[0].isIntersecting && !this.isVisible){
         this.isVisible=true;
+        this.startTimer();
         console.log("Hoola");
       }
       else{
@@ -49,7 +50,8 @@ export class RoundProgressComponent implements OnInit {
     const sub = timer.subscribe((time)=>{
       this.progressbarValue = time * this.props.maxValue / this.props.duration;
       this.timeElapsed = time;
-      console.log(this.timeElapsed);
+      console.log(this.progressbarValue);
+      document.documentElement.style.setProperty('--angle', `${this.progressbarValue * 3.6}deg`);
 
       if (this.timeElapsed === this.props.duration) {
         sub.unsubscribe();
