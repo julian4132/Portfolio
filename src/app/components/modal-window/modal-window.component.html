@@ -1,2 +1,17 @@
-<p>modal-window works!</p>
-<button mat-button (click)="closeWindow()">Cerrar</button>
+<h1 mat-dialog-title>Editar</h1>
+<div mat-dialog-content>
+    <form [formGroup]="form" class="m-5" (ngSubmit)="onSubmit($event)">
+    <!--<p>Título</p>-->
+    <label for="title">Título</label>
+    <mat-form-field appearance="fill">
+        <!--<input matInput [(ngModel)]="data.title">-->
+        <input type="title" formControlName="title"
+        class="form-control" id="titleInput" aria-describedby="titleHelp" placeholder="Enter title">
+    </mat-form-field>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="closeWindow()">Cerrar</button>
+</div>
