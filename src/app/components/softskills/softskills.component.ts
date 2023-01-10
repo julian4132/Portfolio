@@ -16,6 +16,7 @@ export class SoftskillsComponent implements OnInit {
   progressbarValue = 0;
   curSec: number = 0;
   title = 'Portfolio';
+  circularDefault = {"maxValue":100, "duration":60};
 
 
 
