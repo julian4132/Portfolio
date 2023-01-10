@@ -26,6 +26,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { RoundProgressComponent } from './components/round-progress/round-progress.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AwardsComponent } from './components/awards/awards.component';
+import { ModalWindowComponent } from './components/modal-window/modal-window.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { AwardsComponent } from './components/awards/awards.component';
     PortfolioItemListComponent,
     RoundProgressComponent,
     ProjectsComponent,
-    AwardsComponent
+    AwardsComponent,
+    ModalWindowComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { AwardsComponent } from './components/awards/awards.component';
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    DragDropModule
+    DragDropModule,
+    MatDialogModule
   ],
   providers: [FetchPortfolioDataService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }

@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 
 @Component({
@@ -19,7 +21,14 @@ export class PortfolioItemComponent implements OnInit {
                   "extraInfo": "",
                   "imgSrc": ""};
 
-  constructor() {}
+  constructor(public dialog:MatDialog) {}
+
+  openDialog():void{
+    const dialogRef = this.dialog.open(ModalWindowComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
+  }
 
   ngOnInit(): void {
   }
