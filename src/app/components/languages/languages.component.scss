@@ -1,10 +1,19 @@
 .languages-background{
     background-color: rgb(63, 81, 181);
     padding-top: 80px;
+    overflow: auto;
 }
 
 .big-section-title{
     color:azure;
     font-size: 40px!important;
     padding-left: 20px;
+}
+
+.circle-progress-container{
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    float: left;
 }

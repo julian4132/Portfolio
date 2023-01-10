@@ -12,4 +12,5 @@ export class LanguagesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  circularDefault = {"maxValue":100, "duration":60};
 }
