@@ -31,7 +31,7 @@ export class RoundProgressComponent implements OnInit {
         this.isVisible=false;
       }
     },{
-      threshold: 0
+      threshold: 0.3
     });
     this.observer.observe(this.el.nativeElement as HTMLElement);
   }
@@ -46,11 +46,11 @@ export class RoundProgressComponent implements OnInit {
 
 
   startTimer(){
-    const timer = interval(1000);
+    const timer = interval(30);
     const sub = timer.subscribe((time)=>{
-      this.progressbarValue = time * this.props.maxValue / this.props.duration;
+      this.progressbarValue = Math.round(time * this.props.maxValue / this.props.duration);
       this.timeElapsed = time;
-      console.log(this.progressbarValue);
+      //console.log(this.progressbarValue);
       document.documentElement.style.setProperty('--angle', `${this.progressbarValue * 3.6}deg`);
 
       if (this.timeElapsed === this.props.duration) {
