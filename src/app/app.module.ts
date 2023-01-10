@@ -24,6 +24,8 @@ import { PortfolioItemListComponent } from './components/portfolio-item-list/por
 import { MatIconModule } from '@angular/material/icon';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { RoundProgressComponent } from './components/round-progress/round-progress.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { AwardsComponent } from './components/awards/awards.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { RoundProgressComponent } from './components/round-progress/round-progre
     RegisterComponent,
     PortfolioItemComponent,
     PortfolioItemListComponent,
-    RoundProgressComponent
+    RoundProgressComponent,
+    ProjectsComponent,
+    AwardsComponent
   ],
   imports: [
     BrowserModule,
