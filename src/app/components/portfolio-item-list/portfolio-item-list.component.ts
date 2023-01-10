@@ -12,7 +12,8 @@ export class PortfolioItemListComponent implements OnInit {
   @Input() items:{title:string,
                   subtitle:string,
                   description:string,
-                  extraInfo:string}[]=[];
+                  extraInfo:string,
+                  imgSrc:string}[]=[];
 ;
   constructor() { }
 

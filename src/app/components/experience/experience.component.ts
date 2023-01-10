@@ -11,15 +11,13 @@ export class ExperienceComponent implements OnInit {
   experienceProps: {title:string,
                     subtitle:string,
                     description:string,
-                    extraInfo:string}[]=
+                    extraInfo:string
+                    imgSrc:string}[]=
                    [{"title":"Profile",
                     "subtitle":"Desarrollador fullstack - Práctica profesional",
                     "description":"Completar",
-                    "extraInfo": "Junio 2022 - Noviembre 2022"},
-                    {"title":"Profile2",
-                    "subtitle":"Desarrollador fullstack - Práctica profesional",
-                    "description":"Completar",
-                    "extraInfo": "Junio 2022 - Noviembre 2022"},
+                    "extraInfo": "Junio 2022 - Noviembre 2022",
+                    "imgSrc": "assets/images/logo-profile2.png"}
                   ];
 
   constructor() { }

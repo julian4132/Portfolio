@@ -11,11 +11,13 @@ export class PortfolioItemComponent implements OnInit {
   @Input() props:{title: string,
                   subtitle: string,
                   description: string,
-                  extraInfo: string}=
+                  extraInfo: string,
+                  imgSrc: string}=
                  {"title": "",
                   "subtitle": "",
                   "description": "",
-                  "extraInfo": ""};
+                  "extraInfo": "",
+                  "imgSrc": ""};
 
   constructor() {}
 
