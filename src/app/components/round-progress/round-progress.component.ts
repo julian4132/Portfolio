@@ -43,6 +43,7 @@ export class RoundProgressComponent implements OnInit {
 
   progressbarValue:number = 0;
   timeElapsed:number = 0;
+  angle:string="conic-gradient(#7d2ae8 3.6deg, #ededed 0)";
 
 
   startTimer(){
@@ -51,7 +52,9 @@ export class RoundProgressComponent implements OnInit {
       this.progressbarValue = Math.round(time * this.props.maxValue / this.props.duration);
       this.timeElapsed = time;
       //console.log(this.progressbarValue);
-      document.documentElement.style.setProperty('--angle', `${this.progressbarValue * 3.6}deg`);
+      
+      //document.documentElement.style.setProperty('--angle', `${this.progressbarValue * 3.6}deg`);
+      this.angle=`conic-gradient(#7d2ae8 ${this.progressbarValue * 3.6}deg, #ededed 0)`;
 
       if (this.timeElapsed === this.props.duration) {
         sub.unsubscribe();
