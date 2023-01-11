@@ -9,9 +9,9 @@ import { trigger, animate, state, style, transition } from '@angular/animations'
   styleUrls: ['./portfolio-item-list.component.scss'],
   animations: [
     trigger('deleteAnim', [
-      state('appear', style({ height: '*', /*display: 'block',*/ color:'black' })),
-      state('disappear', style({ height: '0px', maxHeight: '0', display: 'none', color: 'white' })),
-      transition('appear <=> disappear', [animate('1000ms cubic-bezier(0.4, 0.0, 0.2, 1)')]),
+      state('appear', style({ height: '*', opacity: 1, color:'black' })),
+      state('disappear', style({ height: '0px', maxHeight: '0', opacity: 0, color: 'white' })),
+      transition('appear <=> disappear', [animate('2000ms cubic-bezier(0.4, 0.0, 0.2, 1)')]),
     ]),
   ]
 })
@@ -39,7 +39,10 @@ export class PortfolioItemListComponent implements OnInit {
     console.log(index);
     this.deletedElement = index;
 
-    //this.items.splice(index, 1);
+    setTimeout( () => { 
+      this.deletedElement = null;
+      this.items.splice(index, 1);
+    } , 1500);
   }
 
 
