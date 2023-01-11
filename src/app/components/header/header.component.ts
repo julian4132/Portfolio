@@ -1,6 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
+
+
+export interface headerData{
+  fullname:string;
+  profession:string;
+  aboutText:string;
+}
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,9 +16,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() headerData:{fullname:string,
-                       profession:string,
-                       aboutText:string}={
+  @Input() headerData:headerData={
                        "fullname":"",
                        "profession":"",
                        "aboutText":""
