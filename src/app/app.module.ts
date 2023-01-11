@@ -29,6 +29,7 @@ import { AwardsComponent } from './components/awards/awards.component';
 import { ModalWindowComponent } from './components/modal-window/modal-window.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -62,7 +63,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     DragDropModule,
     MatDialogModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [FetchPortfolioDataService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }

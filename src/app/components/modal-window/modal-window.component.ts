@@ -16,7 +16,10 @@ export class ModalWindowComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data:any,
     private formBuilder:FormBuilder) {
       this.form = this.formBuilder.group({
-        title: [data.title, []]
+        title: [data.title, []],
+        subtitle: [data.subtitle, []],
+        description: [data.description, []],
+        extraInfo: [data.extraInfo, []]
       });
     }
 
@@ -24,10 +27,12 @@ export class ModalWindowComponent implements OnInit {
   }
 
   closeWindow():void{
-    this.dialogRef.close();
+    this.dialogRef.close(this.form.value);
   }
 
   onSubmit(event:Event){
     event.preventDefault();
+    console.log(this.form.value);
+    //this.data=this.form.value;
   }
 }
