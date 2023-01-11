@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { trigger, animate, state, style, transition } from '@angular/animations';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 
 @Component({
@@ -13,6 +15,11 @@ import { trigger, animate, state, style, transition } from '@angular/animations'
       state('disappear', style({ height: '0px', maxHeight: '0', opacity: 0, color: 'white' })),
       transition('appear <=> disappear', [animate('2000ms cubic-bezier(0.4, 0.0, 0.2, 1)')]),
     ]),
+    trigger('insertAnim', [
+      state('disappear', style({ height: '0px', maxHeight: '0', opacity: 0, color: 'white' })),
+      state('appear', style({ height: '*', opacity: 1, color:'black' })),
+      transition('disappear <=> appear', [animate('2000ms cubic-bezier(0.4, 0.0, 0.2, 1)')]),
+    ])
   ]
 })
 export class PortfolioItemListComponent implements OnInit {
@@ -24,8 +31,9 @@ export class PortfolioItemListComponent implements OnInit {
                   imgSrc:string}[]=[];
 
   deletedElement:any;
+  created:boolean=false;
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -42,8 +50,24 @@ export class PortfolioItemListComponent implements OnInit {
     setTimeout( () => { 
       this.deletedElement = null;
       this.items.splice(index, 1);
-    } , 1500);
+    } , 2500);
   }
 
-
+  openCreateDialog():void{
+    const dialogRef = this.dialog.open(ModalWindowComponent, {
+      data: {"title": "",
+      "subtitle": "",
+      "description": "",
+      "extraInfo": "",
+      "imgSrc": ""}
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      this.created=true;
+      this.items.unshift(result);
+      setTimeout( () => { 
+        this.created=false;
+      }, 50);
+      
+    })
+  }
 }
