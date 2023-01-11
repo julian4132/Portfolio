@@ -39,13 +39,13 @@ export class PortfolioItemComponent implements OnInit {
   }
 
   askIfDeleteDialog(){
-    const dialogRef = this.dialog.open(ModalAskDeleteComponent);
+    /*const dialogRef = this.dialog.open(ModalAskDeleteComponent);
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
-      if(result){
-        this.deleteItem.emit({index: 3});
-      }
-    })
+      if(result){*/
+        this.deleteItem.emit();
+      /*}
+    })*/
   }
 
   ngOnInit(): void {
