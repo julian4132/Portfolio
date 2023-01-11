@@ -14,7 +14,7 @@ export class PortfolioItemListComponent implements OnInit {
                   description:string,
                   extraInfo:string,
                   imgSrc:string}[]=[];
-;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,6 +22,10 @@ export class PortfolioItemListComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.items, event.previousIndex, event.currentIndex);
+  }
+
+  deleteIndex(index:number){
+    console.log(index);
   }
 
 

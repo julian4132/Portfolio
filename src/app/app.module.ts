@@ -30,6 +30,7 @@ import { ModalWindowComponent } from './components/modal-window/modal-window.com
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ModalAskDeleteComponent } from './components/modal-ask-delete/modal-ask-delete.component';
 
 
 
@@ -50,7 +51,8 @@ import { MatInputModule } from '@angular/material/input';
     RoundProgressComponent,
     ProjectsComponent,
     AwardsComponent,
-    ModalWindowComponent
+    ModalWindowComponent,
+    ModalAskDeleteComponent
   ],
   imports: [
     BrowserModule,

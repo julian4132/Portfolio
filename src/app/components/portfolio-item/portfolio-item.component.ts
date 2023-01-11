@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ModalAskDeleteComponent } from '../modal-ask-delete/modal-ask-delete.component';
 import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 
@@ -21,6 +22,8 @@ export class PortfolioItemComponent implements OnInit {
                   "extraInfo": "",
                   "imgSrc": ""};
 
+  @Output() deleteItem = new EventEmitter();
+
   constructor(public dialog:MatDialog) {}
 
   openDialog():void{
@@ -33,6 +36,16 @@ export class PortfolioItemComponent implements OnInit {
       //this.props.title=result.title;
       this.props=result;
     });
+  }
+
+  askIfDeleteDialog(){
+    const dialogRef = this.dialog.open(ModalAskDeleteComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      if(result){
+        this.deleteItem.emit({index: 3});
+      }
+    })
   }
 
   ngOnInit(): void {
