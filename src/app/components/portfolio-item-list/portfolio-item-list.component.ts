@@ -22,10 +22,12 @@ export class PortfolioItemListComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.items, event.previousIndex, event.currentIndex);
+    console.log(this.items);
   }
 
   deleteIndex(index:number){
     console.log(index);
+    this.items.splice(index, 1);
   }
 
 
