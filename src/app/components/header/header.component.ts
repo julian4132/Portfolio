@@ -8,7 +8,13 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() aboutText: string="";
+  @Input() headerData:{fullname:string,
+                       profession:string,
+                       aboutText:string}={
+                       "fullname":"",
+                       "profession":"",
+                       "aboutText":""
+                       };
 
   constructor(private route:Router) { }
 

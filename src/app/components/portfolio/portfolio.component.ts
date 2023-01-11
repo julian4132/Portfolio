@@ -8,7 +8,15 @@ import { FetchPortfolioDataService } from 'src/app/services/fetch-portfolio-data
 })
 export class PortfolioComponent implements OnInit {
 
-  portfolioData:{aboutText:string}={"aboutText": ""};
+  portfolioData:{headerData:{
+                fullname:string,
+                profession:string,
+                aboutText:string}}={
+                "headerData": {
+                "fullname":"",
+                "profession":"",
+                "aboutText":""}};
+    
   constructor(private dataService:FetchPortfolioDataService) { }
 
   ngOnInit(): void {
