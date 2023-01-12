@@ -3,6 +3,8 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { trigger, animate, state, style, transition } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalWindowComponent } from '../modal-window/modal-window.component';
+import { PortfolioItemInfo } from '../portfolio-item/portfolio-item.component';
+import { UpdatePortfolioDataService } from 'src/app/services/update-portfolio-data.service';
 
 
 @Component({
@@ -24,16 +26,13 @@ import { ModalWindowComponent } from '../modal-window/modal-window.component';
 })
 export class PortfolioItemListComponent implements OnInit {
 
-  @Input() items:{title:string,
-                  subtitle:string,
-                  description:string,
-                  extraInfo:string,
-                  imgSrc:string}[]=[];
+  @Input() items:PortfolioItemInfo[]=[];
+  @Input() identifier:string="";
 
   deletedElement:any;
   created:boolean=false;
 
-  constructor(public dialog:MatDialog) { }
+  constructor(public dialog:MatDialog, private updateDataService:UpdatePortfolioDataService) { }
 
   ngOnInit(): void {
   }
@@ -41,6 +40,8 @@ export class PortfolioItemListComponent implements OnInit {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.items, event.previousIndex, event.currentIndex);
     console.log(this.items);
+
+    this.updateDataService.Update({[this.identifier]: this.items});
   }
 
   deleteIndex(index:number){
@@ -51,6 +52,8 @@ export class PortfolioItemListComponent implements OnInit {
       this.deletedElement = null;
       this.items.splice(index, 1);
     } , 2500);
+
+    this.updateDataService.Update({[this.identifier]: this.items});
   }
 
   openCreateDialog():void{
@@ -67,7 +70,8 @@ export class PortfolioItemListComponent implements OnInit {
       setTimeout( () => { 
         this.created=false;
       }, 50);
-      
+
+      this.updateDataService.Update({[this.identifier]: this.items});
     })
   }
 }

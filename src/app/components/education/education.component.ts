@@ -14,7 +14,7 @@ export class EducationComponent implements OnInit {
                   imgSrc:string}[]=
                   [{"title":"Instituto Politécnico Superior",
                     "subtitle":"Técnico en Informática Profesional y Personal",
-                    "description":"Completar",
+                    "description":"Cursado realizado entre 2017 y 2022, con especialización técnica en Informática. Primer Escolta de la Bandera Argentina.",
                     "extraInfo": "2017 - 2022",
                     "imgSrc": "assets/images/logo_poli.png"}
   ];

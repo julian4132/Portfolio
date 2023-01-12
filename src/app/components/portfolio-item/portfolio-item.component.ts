@@ -4,6 +4,14 @@ import { ModalAskDeleteComponent } from '../modal-ask-delete/modal-ask-delete.co
 import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 
+export interface PortfolioItemInfo{
+  title:string
+  subtitle:string
+  description:string
+  extraInfo:string
+  imgSrc:string
+}
+
 @Component({
   selector: 'app-portfolio-item',
   templateUrl: './portfolio-item.component.html',
@@ -11,11 +19,7 @@ import { ModalWindowComponent } from '../modal-window/modal-window.component';
 })
 export class PortfolioItemComponent implements OnInit {
 
-  @Input() props:{title: string,
-                  subtitle: string,
-                  description: string,
-                  extraInfo: string,
-                  imgSrc: string}=
+  @Input() props:PortfolioItemInfo=
                  {"title": "",
                   "subtitle": "",
                   "description": "",

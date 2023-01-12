@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card'
+import { PortfolioItemInfo } from '../portfolio-item/portfolio-item.component';
 
 @Component({
   selector: 'app-experience',
@@ -8,16 +9,12 @@ import { MatCardModule } from '@angular/material/card'
 })
 export class ExperienceComponent implements OnInit {
 
-  experienceProps: {title:string,
-                    subtitle:string,
-                    description:string,
-                    extraInfo:string
-                    imgSrc:string}[]=
-                   [{"title":"Profile",
-                    "subtitle":"Desarrollador fullstack - Práctica profesional",
-                    "description":"Completar",
-                    "extraInfo": "Junio 2022 - Noviembre 2022",
-                    "imgSrc": "assets/images/logo-profile2.png"}
+  experienceProps: PortfolioItemInfo[]=
+                   [{"title":"Don Marca",
+                    "subtitle":"Desarrollador backend",
+                    "description":"Llevado adelante en el marco del programa de prácticas profesionales del Instituto Politécnico. Integración a un equipo de trabajo e interacción directa con el cliente.",
+                    "extraInfo": "Junio 2022 - Noviembre 2022\n\nPráctica Profesional",
+                    "imgSrc": "assets/images/logodonmarca.png"}
                   ];
 
   constructor() { }
