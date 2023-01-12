@@ -39,9 +39,10 @@ export class PortfolioItemListComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.items, event.previousIndex, event.currentIndex);
+    console.log("Mucha atención!");
     console.log(this.items);
 
-    this.updateDataService.Update({[this.identifier]: this.items});
+    this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
   }
 
   deleteIndex(index:number){
@@ -51,9 +52,8 @@ export class PortfolioItemListComponent implements OnInit {
     setTimeout( () => { 
       this.deletedElement = null;
       this.items.splice(index, 1);
+      this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
     } , 2500);
-
-    this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
   }
 
   openCreateDialog():void{

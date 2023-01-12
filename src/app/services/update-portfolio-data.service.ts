@@ -14,7 +14,7 @@ export class UpdatePortfolioDataService {
 
   Update(data:any){
     console.log("enviando");
-    const req=this.http.post(this.url, data);
+    const req=this.http.post(this.url, data, {responseType: 'text'});
     req.subscribe();
   }
 }
