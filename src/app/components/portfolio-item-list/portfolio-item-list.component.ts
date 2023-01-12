@@ -53,7 +53,7 @@ export class PortfolioItemListComponent implements OnInit {
       this.items.splice(index, 1);
     } , 2500);
 
-    this.updateDataService.Update({[this.identifier]: this.items});
+    this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
   }
 
   openCreateDialog():void{
@@ -71,7 +71,7 @@ export class PortfolioItemListComponent implements OnInit {
         this.created=false;
       }, 50);
 
-      this.updateDataService.Update({[this.identifier]: this.items});
+      this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
     })
   }
 }

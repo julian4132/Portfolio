@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Constants } from '../common/global-constants/global-constants';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,8 @@ export class UpdatePortfolioDataService {
   constructor(private http:HttpClient) { }
 
   Update(data:any){
-    this.http.post(this.url, data);
-    console.log(data);
+    console.log("enviando");
+    const req=this.http.post(this.url, data);
+    req.subscribe();
   }
 }
