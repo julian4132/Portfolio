@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { catchError, Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators'
 import { UpdateDataService } from './update-data.service';
 
 @Injectable({
@@ -26,16 +27,16 @@ export class InterceptorService implements HttpInterceptor {
     console.log("Soy Interceptor, "+JSON.stringify(currentUser));
     return next.handle(req).pipe(catchError( err => {
       if(err instanceof HttpErrorResponse && err.status===401){
-        this.refreshService.refreshToken().subscribe();
-        console.log("order??");
-        currentUser = JSON.parse(sessionStorage.getItem('currentUser') || '{}');
-        console.log("Intenté con "+currentUser.token);
-        req = req.clone({
-          setHeaders:{
-            Authorization: `Bearer ${currentUser.token}`
-          }
-        });
-        return next.handle(req);
+        return this.refreshService.refreshToken().pipe(switchMap(tokens => {
+          currentUser = JSON.parse(sessionStorage.getItem('currentUser') || '{}');
+          console.log("Intenté con "+currentUser.token);
+          req = req.clone({
+            setHeaders:{
+              Authorization: `Bearer ${currentUser.token}`
+            }
+          });
+          return next.handle(req);
+        }));
       }
       throw new Error("Not working");
     }))
