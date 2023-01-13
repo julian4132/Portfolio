@@ -27,6 +27,6 @@
 </div>
 
 <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="{edited: true, data: this.form.value}">Aceptar</button>
+    <button mat-button [mat-dialog-close]="{edited: true, data: this.form.value}" cdkFocusInitial>Aceptar</button>
     <button mat-button [mat-dialog-close]="{edited: false, data: this.form.value}">Cancelar</button>
 </div>

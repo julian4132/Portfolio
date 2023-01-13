@@ -31,7 +31,7 @@ export class RoundProgressComponent implements OnInit {
         this.isVisible=false;
       }
     },{
-      threshold: 0.3
+      threshold: 0
     });
     this.observer.observe(this.el.nativeElement as HTMLElement);
   }
@@ -56,7 +56,7 @@ export class RoundProgressComponent implements OnInit {
       //document.documentElement.style.setProperty('--angle', `${this.progressbarValue * 3.6}deg`);
       this.angle=`conic-gradient(#7d2ae8 ${this.progressbarValue * 3.6}deg, #ededed 0)`;
 
-      if (this.timeElapsed === this.props.duration) {
+      if (this.timeElapsed === this.props.duration || !this.isVisible) {
         sub.unsubscribe();
       }
   })
