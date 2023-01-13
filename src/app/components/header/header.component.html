@@ -7,7 +7,7 @@
       <div href="#" class="fa fa-linkedin social-icon"></div>
       <p class="social-icon-text">proximamentesoloencines</p>
       <button *ngIf="!isLoggedIn()" mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="goToPage('login')">Log in</button>
-      <button mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="goToPage('register')">Signup</button>
+      <!--<button mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="goToPage('register')">Signup</button>-->
       <button *ngIf="isLoggedIn()" mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="logOut()">Log out</button>
     </div>
   </nav>
