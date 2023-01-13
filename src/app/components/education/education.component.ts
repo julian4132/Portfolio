@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-education',
@@ -7,17 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
 
-  educationProps:{title:string,
+  @Input() educationProps:{title:string,
                   subtitle:string,
                   description:string,
                   extraInfo:string
-                  imgSrc:string}[]=
-                  [{"title":"Instituto Politécnico Superior",
-                    "subtitle":"Técnico en Informática Profesional y Personal",
-                    "description":"Cursado realizado entre 2017 y 2022, con especialización técnica en Informática. Primer Escolta de la Bandera Argentina.",
-                    "extraInfo": "2017 - 2022",
-                    "imgSrc": "assets/images/logo_poli.png"}
-  ];
+                  imgSrc:string}[]=[];
 
   constructor() { }
 

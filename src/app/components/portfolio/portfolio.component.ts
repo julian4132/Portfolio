@@ -12,7 +12,8 @@ export class PortfolioComponent implements OnInit {
 
   portfolioData:{headerData:headerData,
                 experienceData:{
-                  experienceData:[PortfolioItemInfo]
+                  experienceData:[PortfolioItemInfo],
+                  educationData:[PortfolioItemInfo]
                 }}={
                 "headerData": {
                 "fullname":"Julián Máximo Cabrera",
@@ -26,8 +27,15 @@ export class PortfolioComponent implements OnInit {
                     "description":"Llevado adelante en el marco del programa de prácticas profesionales del Instituto Politécnico. Integración a un equipo de trabajo e interacción directa con el cliente.",
                     "extraInfo": "Junio 2022 - Noviembre 2022\n\nPráctica Profesional",
                     "imgSrc": "assets/images/logodonmarca.png"}
-                ]
-              }};
+                    ],
+                  "educationData":
+                    [{"title":"Instituto Politécnico Superior",
+                    "subtitle":"Técnico en Informática Profesional y Personal",
+                    "description":"Cursado realizado entre 2017 y 2022, con especialización técnica en Informática. Primer Escolta de la Bandera Argentina.",
+                    "extraInfo": "2017 - 2022",
+                    "imgSrc": "assets/images/logo_poli.png"}],
+              }
+            };
     
   constructor(private dataService:FetchPortfolioDataService) {}
 
