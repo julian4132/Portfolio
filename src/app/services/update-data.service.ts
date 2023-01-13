@@ -15,11 +15,11 @@ export class UpdateDataService {
   refreshToken():Observable<any>{
     var token:string=JSON.parse(sessionStorage.getItem('currentUser') || '{}').refreshToken;
     return this.http.post(this.url, {refreshToken: token}).pipe(map(newToken=>{
-      console.log("jijiji");
       sessionStorage.setItem('currentUser', JSON.stringify({
         token: (newToken as {token:string}).token,
         refreshToken: token
       }))
+      console.log("Holaaaa "+(newToken as {token:string}).token);
       return newToken;
     }));
   }

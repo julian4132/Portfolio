@@ -12,7 +12,8 @@ export class InterceptorService implements HttpInterceptor {
   constructor(private authService:AuthService, private refreshService:UpdateDataService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    var currentUser = this.authService.CurrentUser;
+    //var currentUser = this.authService.CurrentUser;
+    var currentUser = JSON.parse(sessionStorage.getItem('currentUser') || '{}');
     
     if(currentUser && currentUser.token){
       console.log("Funciono, " + currentUser.token);
@@ -26,6 +27,14 @@ export class InterceptorService implements HttpInterceptor {
     return next.handle(req).pipe(catchError( err => {
       if(err instanceof HttpErrorResponse && err.status===401){
         this.refreshService.refreshToken().subscribe();
+        console.log("order??");
+        currentUser = JSON.parse(sessionStorage.getItem('currentUser') || '{}');
+        console.log("Intenté con "+currentUser.token);
+        req = req.clone({
+          setHeaders:{
+            Authorization: `Bearer ${currentUser.token}`
+          }
+        });
         return next.handle(req);
       }
       throw new Error("Not working");
