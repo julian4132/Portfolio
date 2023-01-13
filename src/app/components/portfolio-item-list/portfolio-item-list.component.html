@@ -9,7 +9,7 @@
 
     <div *ngFor="let item of items, index as i" [@deleteAnim]="i===deletedElement? 'disappear' : 'appear'"
     [@insertAnim]="(i===0 && created)? 'disappear' : 'appear'">
-        <app-portfolio-item class="example-box" [props]="item" (deleteItem)="deleteIndex(i)" cdkDrag></app-portfolio-item>
+        <app-portfolio-item class="example-box" [props]="item" (deleteItem)="deleteIndex(i)" (editItem)="syncWithDatabase(i, $event)" cdkDrag></app-portfolio-item>
     </div>
 </div>
 </div>

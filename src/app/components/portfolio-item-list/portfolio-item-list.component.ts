@@ -74,4 +74,10 @@ export class PortfolioItemListComponent implements OnInit {
       this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
     })
   }
+
+  syncWithDatabase(i:number, event:any):void{
+    console.log("Debiera funcionar");
+    this.items[i]=event;
+    this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
+  }
 }

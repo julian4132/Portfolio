@@ -27,6 +27,7 @@ export class PortfolioItemComponent implements OnInit {
                   "imgSrc": ""};
 
   @Output() deleteItem = new EventEmitter();
+  @Output() editItem = new EventEmitter();
 
   constructor(public dialog:MatDialog) {}
 
@@ -38,7 +39,8 @@ export class PortfolioItemComponent implements OnInit {
       console.log("The dialog was closed");
       console.log(result);
       //this.props.title=result.title;
-      this.props=result;
+      //this.props=result;
+      this.editItem.emit(result);
     });
   }
 

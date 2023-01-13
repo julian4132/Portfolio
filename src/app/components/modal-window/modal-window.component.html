@@ -1,44 +1,30 @@
 <h1 mat-dialog-title>Editar</h1>
 <div mat-dialog-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-    <mat-form-field appearance="fill">
-        <mat-label for="title">Título</mat-label>
-        <input matInput type="title" formControlName="title" aria-describedby="titleHelp" placeholder="Título">
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label for="title">Subtítulo</mat-label>
-        <input matInput type="title" formControlName="subtitle" aria-describedby="subTitleHelp" placeholder="Subtítulo">
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label for="title">Descripción</mat-label>
-        <input matInput type="title" formControlName="description" aria-describedby="decscriptionHelp" placeholder="Descripción">
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label for="title">Información adicional</mat-label>
-        <input matInput type="title" formControlName="extraInfo" id="titleInput" aria-describedby="extraInfoHelp" placeholder="Más">
-    </mat-form-field>
-    <button type="submit" class="btn btn-primary">Aceptar</button>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label for="title">Título</mat-label>
+                <input matInput type="title" formControlName="title" aria-describedby="titleHelp" placeholder="Título">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label for="title">Subtítulo</mat-label>
+                <input matInput type="title" formControlName="subtitle" aria-describedby="subTitleHelp" placeholder="Subtítulo">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill" class="my-textarea-field">
+                <mat-label for="title">Descripción</mat-label>
+                <textarea matInput type="title" formControlName="description" aria-describedby="decscriptionHelp" placeholder="Descripción" class="my-textarea"></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label for="title">Información adicional</mat-label>
+                <input matInput type="title" formControlName="extraInfo" id="titleInput" aria-describedby="extraInfoHelp" placeholder="Más">
+            </mat-form-field>
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
     </form>
-
-    <!--<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-        <mat-form-field appearance="fill">
-            <mat-label>Favorite food</mat-label>
-            <input matInput type="title" formControlName="title" placeholder="Ex. Pizza" value="Sushi">  
-        </mat-form-field>
-    </form>-->
-
-
-    <!--<form class="example-form">
-        <mat-form-field class="example-full-width">
-          <mat-label>Favorite food</mat-label>
-          <input matInput placeholder="Ex. Pizza" value="Sushi">
-        </mat-form-field>
-      
-        <mat-form-field class="example-full-width">
-          <mat-label>Leave a comment</mat-label>
-          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-        </mat-form-field>
-      </form>-->
 </div>
 
 <div mat-dialog-actions>
