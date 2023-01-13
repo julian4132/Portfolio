@@ -1,8 +1,9 @@
 <div>
   <nav>
     <img class="argLogo" src="assets/images/APLogo.png">
-    <button mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="goToPage('login')">Login</button>
+    <button *ngIf="!isLoggedIn()" mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="goToPage('login')">Log in</button>
     <button mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="goToPage('register')">Signup</button>
+    <button *ngIf="isLoggedIn()" mat-raised-button color="primary" class="sessionButton mat-elevation-z7" (click)="logOut()">Log out</button>
   </nav>
   
   <div class="container">
