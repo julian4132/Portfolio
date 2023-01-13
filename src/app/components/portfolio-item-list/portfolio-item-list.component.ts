@@ -65,13 +65,14 @@ export class PortfolioItemListComponent implements OnInit {
       "imgSrc": ""}
     })
     dialogRef.afterClosed().subscribe(result => {
-      this.created=true;
-      this.items.unshift(result);
-      setTimeout( () => { 
-        this.created=false;
-      }, 50);
-
-      this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
+      if(result.edited){
+        this.created=true;
+        this.items.unshift(result.data);
+        setTimeout( () => { 
+          this.created=false;
+        }, 50);
+        this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
+      }
     })
   }
 

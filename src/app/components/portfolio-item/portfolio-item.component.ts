@@ -38,9 +38,9 @@ export class PortfolioItemComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log("The dialog was closed");
       console.log(result);
-      //this.props.title=result.title;
-      //this.props=result;
-      this.editItem.emit(result);
+      if(result.edited){
+        this.editItem.emit(result.data);
+      }
     });
   }
 
