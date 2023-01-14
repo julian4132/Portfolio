@@ -27,7 +27,7 @@ export class PortfolioComponent implements OnInit {
                     "description":"Llevado adelante en el marco del programa de prácticas profesionales del Instituto Politécnico. Integración a un equipo de trabajo e interacción directa con el cliente.",
                     "extraInfo": "Junio 2022 - Noviembre 2022\n\nPráctica Profesional",
                     "imgSrc": "assets/images/logodonmarca.png",
-                    "linkIndex": ""}
+                    "linkIndex": "hoola"}
                     ],
                   "educationData":
                     [{"title":"Instituto Politécnico Superior",

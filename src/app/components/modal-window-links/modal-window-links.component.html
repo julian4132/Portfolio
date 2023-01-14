@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Referencias</h1>
+<div *ngIf="links" mat-dialog-content>
+    <!--<a *ngFor="let link of links.list" href="{{link.link}}">{{link.text}}</a>-->
+    <div *ngFor="let link of links.list">
+        <a  href="{{link.link}}">{{link.text}}</a>        
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="true">Borrar</button>
+</div>

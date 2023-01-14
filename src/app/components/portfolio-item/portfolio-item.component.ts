@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalAskDeleteComponent } from '../modal-ask-delete/modal-ask-delete.component';
+import { ModalWindowLinksComponent } from '../modal-window-links/modal-window-links.component';
 import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 
@@ -53,6 +54,12 @@ export class PortfolioItemComponent implements OnInit {
       if(result){
         this.deleteItem.emit();
       }
+    })
+  }
+
+  getLinks(){
+    this.dialog.open(ModalWindowLinksComponent, {
+      data: this.props.linkIndex
     })
   }
 

@@ -19,6 +19,9 @@
             <div class="item-button">
                 <button mat-mini-fab (click)="askIfDeleteDialog()"><mat-icon>delete</mat-icon></button>
             </div>
+            <div *ngIf="props.linkIndex!==''" class="item-button">
+              <button mat-button (click)="getLinks()"><mat-icon>Referencias</mat-icon></button>
+            </div>
           </div>
         </div>
     </div>
