@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RoundProgressInfo } from '../round-progress/round-progress.component';
 
 @Component({
   selector: 'app-languages',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./languages.component.scss']
 })
 export class LanguagesComponent implements OnInit {
+
+  @Input() languagesProps:RoundProgressInfo[]=[];
 
   constructor() { }
 

@@ -1,6 +1,4 @@
-/*:root {
-    --angle: 3.6deg;
-}*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .softskills-background{
     background-color: rgb(70, 20, 106);
@@ -49,4 +47,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 5%;
+}
+
+
+
+.epigraph{
+    padding-top: 15px;
+    text-align:center;
+}
+
+.epigraph-text{
+    font-family: 'Roboto', sans-serif;
 }

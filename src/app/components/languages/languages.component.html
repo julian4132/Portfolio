@@ -6,7 +6,7 @@
     <div class="circle-progress-container">
         <app-round-progress [props]="circularDefault"></app-round-progress>
     </div>-->
-    <div class="circle-progress-container">
+    <!--<div class="circle-progress-container">
         <app-round-progress [props]="circularDefault"></app-round-progress>
     </div>
     <div class="circle-progress-container">
@@ -14,5 +14,9 @@
     </div>
     <div class="circle-progress-container">
         <app-round-progress [props]="circularDefault"></app-round-progress>
+    </div>-->
+
+    <div *ngFor="let item of languagesProps" class="circle-progress-container">
+        <app-round-progress [props]="circularDefault" [progressData]="item"></app-round-progress>
     </div>
 </div>

@@ -1,5 +1,10 @@
 <div class="progress-container mat-elevation-z7">
-    <div class="circular-progress" [style.background]="angle">
-        <span class="progress-value">{{progressbarValue}}%</span>
+    <div>
+        <div class="circular-progress" [style.background]="angle">
+            <span class="progress-value">{{progressbarValue}}%</span>
+        </div>
+        <div class="epigraph">
+            <p class="epigraph-text">{{progressData.description}}</p>
+        </div>
     </div>
 </div>

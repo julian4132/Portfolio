@@ -1,6 +1,13 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { interval } from 'rxjs';
 
+export interface RoundProgressInfo{
+  percentage:number
+  description:string
+}
+
+
+
 @Component({
   selector: 'app-round-progress',
   templateUrl: './round-progress.component.html',
@@ -40,6 +47,7 @@ export class RoundProgressComponent implements OnInit {
                   duration:number}=
                  {"maxValue": 0,
                   "duration": 0}
+  @Input() progressData:RoundProgressInfo={"percentage":100, "description": ""};
 
   progressbarValue:number = 0;
   timeElapsed:number = 0;

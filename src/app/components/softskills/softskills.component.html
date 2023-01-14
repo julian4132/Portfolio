@@ -1,6 +1,6 @@
 <div class="softskills-background">
   <h1 class="big-section-title">Habilidades blandas</h1>
-  <div class="circle-progress-container">
+  <!--<div class="circle-progress-container">
     <app-round-progress [props]="circularDefault"></app-round-progress>
   </div>
   <div class="circle-progress-container">
@@ -8,5 +8,9 @@
   </div>
   <div class="circle-progress-container">
     <app-round-progress [props]="circularDefault"></app-round-progress>
-  </div>
+  </div>-->
+
+  <div *ngFor="let item of softSkillsProps" class="circle-progress-container">
+    <app-round-progress [props]="circularDefault" [progressData]="item"></app-round-progress>
+</div>
 </div>

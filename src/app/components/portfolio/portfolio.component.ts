@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchPortfolioDataService } from 'src/app/services/fetch-portfolio-data.service';
 import { headerData } from '../header/header.component';
 import { PortfolioItemInfo } from '../portfolio-item/portfolio-item.component';
+import { RoundProgressInfo } from '../round-progress/round-progress.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,8 +13,14 @@ export class PortfolioComponent implements OnInit {
 
   portfolioData:{headerData:headerData,
                 experienceData:{
-                  experienceData:[PortfolioItemInfo],
-                  educationData:[PortfolioItemInfo]
+                  experienceData:PortfolioItemInfo[],
+                  educationData:PortfolioItemInfo[],
+                  awardsData:PortfolioItemInfo[],
+                  projectsData:PortfolioItemInfo[]
+                },
+                skillsData:{
+                  softSkillsData:RoundProgressInfo[],
+                  languagesData:RoundProgressInfo[]
                 }}={
                 "headerData": {
                 "fullname":"Julián Máximo Cabrera",
@@ -36,7 +43,56 @@ export class PortfolioComponent implements OnInit {
                     "extraInfo": "2017 - 2022",
                     "imgSrc": "assets/images/logo_poli.png",
                     "linkIndex": ""}],
-              }
+                  "awardsData":
+                    [{"title":"Profile",
+                      "subtitle":"Desarrollador fullstack - Práctica profesional",
+                      "description":"Completar",
+                      "extraInfo": "Junio 2022 - Noviembre 2022",
+                      "imgSrc": "assets/images/logo-profile2.png",
+                      "linkIndex": ""},
+                     {"title":"Profile",
+                      "subtitle":"Desarrollador fullstack - Práctica profesional",
+                      "description":"Completar",
+                      "extraInfo": "Junio 2022 - Noviembre 2022",
+                      "imgSrc": "assets/images/logo-profile2.png",
+                      "linkIndex": ""}
+                      ],
+                  "projectsData":
+                  [{"title":"Profile",
+                    "subtitle":"Desarrollador fullstack - Práctica profesional",
+                    "description":"Completar",
+                    "extraInfo": "Junio 2022 - Noviembre 2022",
+                    "imgSrc": "assets/images/logo-profile2.png",
+                    "linkIndex": ""},
+                   {"title":"Profile",
+                    "subtitle":"Desarrollador fullstack - Práctica profesional",
+                    "description":"Completar",
+                    "extraInfo": "Junio 2022 - Noviembre 2022",
+                    "imgSrc": "assets/images/logo-profile2.png",
+                    "linkIndex": ""},
+                   {"title":"Profile",
+                    "subtitle":"Desarrollador fullstack - Práctica profesional",
+                    "description":"Completar",
+                    "extraInfo": "Junio 2022 - Noviembre 2022",
+                    "imgSrc": "assets/images/logo-profile2.png",
+                    "linkIndex": ""}
+                  ]
+              },
+
+              "skillsData": {
+                "softSkillsData": [{
+                    "percentage": 80,
+                    "description": "de efectividad"
+                }],
+                "languagesData": [{
+                    "percentage": 100,
+                    "description": "Español"
+                },{
+                    "percentage": 90,
+                    "description": "Inglés (nivel MCER: C2)"
+                }],
+            }
+              
             };
     
   constructor(private dataService:FetchPortfolioDataService) {}

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { Component, OnInit, Input } from '@angular/core';
+import { RoundProgressInfo } from '../round-progress/round-progress.component';
 
 @Component({
   selector: 'app-softskills',
@@ -7,6 +7,8 @@ import { interval, Subscription } from 'rxjs';
   styleUrls: ['./softskills.component.scss']
 })
 export class SoftskillsComponent implements OnInit {
+
+  @Input() softSkillsProps:RoundProgressInfo[]=[];
 
   constructor() { }
 
