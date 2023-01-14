@@ -36,6 +36,7 @@
     font-size: 40px;
     font-weight: 600;
     color: #7d2ae8;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -58,4 +59,21 @@
 
 .epigraph-text{
     font-family: 'Roboto', sans-serif;
+}
+
+
+
+@media only screen and (max-width: 450px){
+    .progress-container{
+        width: 250px;
+        height: 250px;
+    }
+    .circular-progress{
+        height: 180px;
+        width: 180px;
+    }
+    .circular-progress::before{
+        height: 150px;
+        width: 150px;
+    }
 }
