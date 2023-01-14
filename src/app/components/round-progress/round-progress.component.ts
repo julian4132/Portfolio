@@ -57,7 +57,7 @@ export class RoundProgressComponent implements OnInit {
   startTimer(){
     const timer = interval(30);
     const sub = timer.subscribe((time)=>{
-      this.progressbarValue = Math.round(time * this.props.maxValue / this.props.duration);
+      this.progressbarValue = Math.round(time * this.progressData.percentage / this.props.duration);
       this.timeElapsed = time;
       //console.log(this.progressbarValue);
       
