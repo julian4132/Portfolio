@@ -32,6 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ModalAskDeleteComponent } from './components/modal-ask-delete/modal-ask-delete.component';
 import { ModalWindowLinksComponent } from './components/modal-window-links/modal-window-links.component';
+import { ModalWindowHeaderComponent } from './components/modal-window-header/modal-window-header.component';
 
 
 
@@ -54,7 +55,8 @@ import { ModalWindowLinksComponent } from './components/modal-window-links/modal
     AwardsComponent,
     ModalWindowComponent,
     ModalAskDeleteComponent,
-    ModalWindowLinksComponent
+    ModalWindowLinksComponent,
+    ModalWindowHeaderComponent
   ],
   imports: [
     BrowserModule,
