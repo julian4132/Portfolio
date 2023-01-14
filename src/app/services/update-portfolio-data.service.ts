@@ -13,7 +13,8 @@ export class UpdatePortfolioDataService {
   constructor(private http:HttpClient) { }
 
   Update(data:any){
-    console.log("enviando");
+    console.log("enviando info:");
+    console.log(data);
     const req=this.http.post(this.url, data, {responseType: 'text'});
     req.subscribe();
   }

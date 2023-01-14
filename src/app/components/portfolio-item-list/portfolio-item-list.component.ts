@@ -62,7 +62,8 @@ export class PortfolioItemListComponent implements OnInit {
       "subtitle": "",
       "description": "",
       "extraInfo": "",
-      "imgSrc": ""}
+      "imgSrc": "",
+      "linkIndex": ""}
     })
     dialogRef.afterClosed().subscribe(result => {
       if(result.edited){

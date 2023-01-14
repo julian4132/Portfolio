@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { PortfolioItemInfo } from '../portfolio-item/portfolio-item.component';
 
 @Component({
   selector: 'app-modal-window',
@@ -35,4 +36,18 @@ export class ModalWindowComponent implements OnInit {
     console.log(this.form.value);
     //this.data=this.form.value;
   }
+
+  onClose(edited:boolean):{edited:boolean, data:PortfolioItemInfo}{
+    var data:PortfolioItemInfo = {
+      title: this.form.value.title,
+      subtitle: this.form.value.subtitle,
+      description: this.form.value.description,
+      extraInfo: this.form.value.extraInfo,
+      imgSrc: "",
+      linkIndex: "",
+    }
+    return {edited: edited, data: data};
+  }
+
+
 }

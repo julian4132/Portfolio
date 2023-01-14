@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PortfolioItemInfo } from '../portfolio-item/portfolio-item.component';
 
 @Component({
   selector: 'app-education',
@@ -7,11 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
 
-  @Input() educationProps:{title:string,
-                  subtitle:string,
-                  description:string,
-                  extraInfo:string
-                  imgSrc:string}[]=[];
+  @Input() educationProps:PortfolioItemInfo[]=[];
 
   constructor() { }
 

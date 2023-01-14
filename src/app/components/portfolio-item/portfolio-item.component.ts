@@ -10,6 +10,7 @@ export interface PortfolioItemInfo{
   description:string
   extraInfo:string
   imgSrc:string
+  linkIndex:string
 }
 
 @Component({
@@ -24,7 +25,8 @@ export class PortfolioItemComponent implements OnInit {
                   "subtitle": "",
                   "description": "",
                   "extraInfo": "",
-                  "imgSrc": ""};
+                  "imgSrc": "",
+                  "linkIndex": ""};
 
   @Output() deleteItem = new EventEmitter();
   @Output() editItem = new EventEmitter();
