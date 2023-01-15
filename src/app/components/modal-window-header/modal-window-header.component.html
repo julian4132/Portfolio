@@ -1,32 +1,32 @@
 <h1 mat-dialog-title>Editar</h1>
 <div mat-dialog-content>
     <form [formGroup]="form">
-        <div>
-            <mat-form-field appearance="fill">
+        <div style="min-width: 320px">
+            <mat-form-field appearance="fill" style="width: 100%">
                 <mat-label for="fullName">Nombre</mat-label>
                 <input matInput type="fullName" formControlName="fullName" aria-describedby="fullNameHelp" placeholder="Nombre">
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill" class="my-textarea-field">
+            <mat-form-field appearance="fill" style="width: 100%">
                 <mat-label for="profession">Profesión</mat-label>
                 <input matInput type="profession" formControlName="profession" aria-describedby="professionHelp" placeholder="Profesión" class="my-textarea">
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 100%; min-height: 100px">
                 <mat-label for="aboutText">Acerca de</mat-label>
-                <textarea matInput type="aboutText" formControlName="aboutText" id="aboutTextInput" aria-describedby="aboutTextHelp" placeholder="Acerca de"></textarea>
+                <textarea matInput type="aboutText" formControlName="aboutText" id="aboutTextInput" aria-describedby="aboutTextHelp" placeholder="Acerca de" style="min-height: 100px"></textarea>
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 100%">
                 <mat-label for="profilePicSrc">Link a foto de perfil</mat-label>
                 <input matInput type="profilePicSrc" formControlName="profilePicSrc" id="profilePicSrcnput" aria-describedby="profilePicSrcHelp" placeholder="Link a foto de perfil">
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 100%">
                 <mat-label for="bannerSrc">Link a foto del banner</mat-label>
                 <input matInput type="bannerSrc" formControlName="bannerSrc" id="bannerSrcnput" aria-describedby="bannerSrcHelp" placeholder="Link a foto del banner">
             </mat-form-field>

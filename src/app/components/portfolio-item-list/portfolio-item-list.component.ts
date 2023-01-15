@@ -48,11 +48,13 @@ export class PortfolioItemListComponent implements OnInit {
   deleteIndex(index:number){
     console.log(index);
     this.deletedElement = index;
+    var clone = [...this.items];
+    clone.splice(index, 1);
+    this.updateDataService.Update({experienceData: {[this.identifier]: clone}});
 
     setTimeout( () => { 
       this.deletedElement = null;
       this.items.splice(index, 1);
-      this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
     } , 2500);
   }
 

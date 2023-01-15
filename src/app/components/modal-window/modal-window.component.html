@@ -1,30 +1,32 @@
 <h1 mat-dialog-title>Editar</h1>
 <div mat-dialog-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
-        <div>
-            <mat-form-field appearance="fill">
+        <div style="min-width: 320px">
+            <mat-form-field appearance="fill" style="width: 100%">
                 <mat-label for="title">Título</mat-label>
                 <input matInput type="title" formControlName="title" aria-describedby="titleHelp" placeholder="Título">
             </mat-form-field>
-            <mat-form-field appearance="fill">
+        </div>
+        <div>
+            <mat-form-field appearance="fill" style="width: 100%">
                 <mat-label for="title">Subtítulo</mat-label>
                 <input matInput type="title" formControlName="subtitle" aria-describedby="subTitleHelp" placeholder="Subtítulo">
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill" class="my-textarea-field">
+            <mat-form-field appearance="fill" class="my-textarea-field" style="width: 100%; min-height: 80px">
                 <mat-label for="title">Descripción</mat-label>
-                <textarea matInput type="title" formControlName="description" aria-describedby="decscriptionHelp" placeholder="Descripción" class="my-textarea"></textarea>
+                <textarea matInput type="title" formControlName="description" aria-describedby="decscriptionHelp" placeholder="Descripción" class="my-textarea" style="min-height: 80px"></textarea>
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 100%; min-height: 60px">
                 <mat-label for="title">Información adicional</mat-label>
-                <textarea matInput type="title" formControlName="extraInfo" id="titleInput" aria-describedby="extraInfoHelp" placeholder="Más"></textarea>
+                <textarea matInput type="title" formControlName="extraInfo" id="titleInput" aria-describedby="extraInfoHelp" placeholder="Más" style="min-height: 60px"></textarea>
             </mat-form-field>
         </div>
         <div>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" style="width: 100%">
                 <mat-label for="imgSrc">Link a la imagen</mat-label>
                 <input matInput type="imgSrc" formControlName="imgSrc" id="imgSrcInput" aria-describedby="imgSrcHelp" placeholder="Más">
             </mat-form-field>
