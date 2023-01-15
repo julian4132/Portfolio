@@ -1,25 +1,44 @@
-<form [formGroup]="form" class="m-5" (ngSubmit)="onSubmit($event)">
-
+<div style="display:flex; align-items: center; justify-content: center; height: 100vh">
+<mat-card style="min-width:320px; text-align: center; border-radius:7%; background-color:rgb(63, 81, 181); color:azure">
+  <p class="login-text"><strong>Iniciar sesión</strong></p>
+  <hr style="width: 70%; padding-bottom: 10px">
   <form [formGroup]="form" class="m-5" (ngSubmit)="onSubmit($event)">
 
-    <div class="mb-3">
-        <label for="username">Username</label>
-        <input type="username" formControlName="username"
-        class="form-control" id="usernameInput" aria-describedby="userHelp" placeholder="Enter username">
-
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" formControlName="password"
-      class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-
-
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <div style="padding-bottom: 15px">
+      <p style="color:azure">Usuario</p>
+      <mat-form-field color="accent" style="padding-bottom: 15px; width:100%">
+        <!--<mat-label for="username">Usuario</mat-label>-->
+        <input matInput type="username" formControlName="username"
+        id="usernameInput" aria-describedby="userHelp" style="width: 100%">
+        <mat-placeholder>Usuario</mat-placeholder>
+      </mat-form-field>
+      <div *ngIf="Username?.errors && Username?.touched">
+        <p *ngIf="Username?.hasError('required')" class="text-danger">
+          Este campo es obligatorio
+        </p>
+      </div>
     </div>
 
+    
+    <div style="padding-bottom: 15px">
+      <p style="color:azure">Contraseña</p>
+      <mat-form-field color="accent" style="padding-bottom: 15px; width:100%">
+        <input matInput type="password" formControlName="password"
+        id="exampleInputPassword1" style="width: 100%">
+        <mat-placeholder>Contraseña</mat-placeholder>
+      </mat-form-field>
+      <div *ngIf="Password?.errors && Password?.touched">
+        <p *ngIf="Password?.hasError('required')" class="text-danger">
+          La contraseña es requerida
+        </p>
+        <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+          Debe tener al menos 8 caracteres
+        </p>
+      </div>
+    </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button mat-raised-button color="warn">Enviar</button>
   </form>
+</mat-card>
+</div>

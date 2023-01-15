@@ -13,9 +13,9 @@ export class LoginComponent implements OnInit {
   form:FormGroup;
   constructor(private formBuilder:FormBuilder, private auth:AuthService, private route:Router) {
     this.form = this.formBuilder.group({
-      username:['', []],
-      email:['',[/*Validators.required, Validators.email*/]],
-      password:['',[/*Validators.required, Validators.minLength(8)*/]],
+      username:['', [Validators.required]],
+      email:['',[Validators.required, Validators.email]],
+      password:['',[Validators.required, Validators.minLength(8)]],
       deviceInfo:this.formBuilder.group({
         deviceId: ["24563455"],
         deviceType: ["DEVICE_TYPE_ANDROID"],
