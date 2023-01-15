@@ -20,7 +20,8 @@ export class ModalWindowComponent implements OnInit {
         title: [data.title, []],
         subtitle: [data.subtitle, []],
         description: [data.description, []],
-        extraInfo: [data.extraInfo, []]
+        extraInfo: [data.extraInfo, []],
+        imgSrc: [data.imgSrc, []]
       });
     }
 
@@ -43,7 +44,7 @@ export class ModalWindowComponent implements OnInit {
       subtitle: this.form.value.subtitle,
       description: this.form.value.description,
       extraInfo: this.form.value.extraInfo,
-      imgSrc: "",
+      imgSrc: this.form.value.imgSrc,
       linkIndex: "",
     }
     return {edited: edited, data: data};

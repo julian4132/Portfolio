@@ -20,7 +20,13 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label for="title">Información adicional</mat-label>
-                <input matInput type="title" formControlName="extraInfo" id="titleInput" aria-describedby="extraInfoHelp" placeholder="Más">
+                <textarea matInput type="title" formControlName="extraInfo" id="titleInput" aria-describedby="extraInfoHelp" placeholder="Más"></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label for="imgSrc">Link a la imagen</mat-label>
+                <input matInput type="imgSrc" formControlName="imgSrc" id="imgSrcInput" aria-describedby="imgSrcHelp" placeholder="Más">
             </mat-form-field>
         </div>
     </form>
