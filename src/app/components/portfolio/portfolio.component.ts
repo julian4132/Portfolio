@@ -25,7 +25,7 @@ export class PortfolioComponent implements OnInit {
                 "headerData": {
                 "fullName":"Julián Máximo Cabrera",
                 "profession":"Full Stack Developer",
-                "aboutText":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "aboutText":"Desarrollador web con conocimentos en Angular, Spring Boot, React y Laravel. Manejo de sistemas de control de versiones. Git y Github. Github Actions. Testing automatizado. CI/CD. Adicionalmente, manejo de Linux y scripting en Bash. Experiencia en C, C++, C#. Algoritmia, análisis asintótico, y confección de algoritmos eficientes. Especial habilidad para resolver problemas y enfrentar desafíos.",
                 "profilePicSrc": "assets/images/profile.jpg",
                 "bannerSrc": "assets/images/Banner.jpg"},
                 
@@ -48,25 +48,25 @@ export class PortfolioComponent implements OnInit {
                   "awardsData":
                     [{"title":"Olimpíada Internacional de Matemática",
                       "subtitle":"Bronce (2019, 2020), Plata (2021, 2022)",
-                      "description":"Participaciones llevadas a cabo en los años 2019 (Inglaterra), 2020 (Rusia, virtual), 2021 (Rusia, virtual) y 2022 (Noruega), obteniendo dos medallas de bronce y luego dos de plata",
+                      "description":"Participaciones llevadas a cabo en los años 2019 (Inglaterra, Medalla de Bronce), 2020 (Rusia, virtual, Medalla de Bronce), 2021 (Rusia, virtual, Medalla de Plata) y 2022 (Noruega, Medalla de Plata).",
                       "extraInfo": "2019, 2020, 2021, 2022",
                       "imgSrc": "assets/images/IMOOslo.png",
                       "linkIndex": "imo"},
                      {"title":"Olimpíada Iberoamericana de Matemática",
                       "subtitle":"Oro (2020, 2021) - puntaje perfecto",
-                      "description":"Participaciones llevadas a cabo en los años 2020 (Perú, virtual) y 2021 (Costa Rica, virtual)",
+                      "description":"Participaciones llevadas a cabo en los años 2020 (Perú, virtual, Oro perfecto) y 2021 (Costa Rica, virtual, Oro perfecto)",
                       "extraInfo": "2020, 2021",
                       "imgSrc": "assets/images/IberoCostaRica.jpg",
                       "linkIndex": "ibero"},
                       {"title":"UdeSA AI Challenge",
                       "subtitle":"3er puesto",
-                      "description":"Competencia en equipos de 4 personas enfocada hacia el desarrollo de un equipo jugador de fútbol NPC en Unity, que compite en un torneo contra los desarrollados por otros equipos participantes.",
+                      "description":"Competencia en grupos de 4 personas enfocada hacia el desarrollo de un equipo de fútbol NPC en Unity, para competir en un torneo contra los equipos desarrollados por otros participantes.",
                       "extraInfo": "2022",
                       "imgSrc": "assets/images/AIChallenge.jpg",
                       "linkIndex": "ai"},
                       {"title":"Olimpíada Informática Argentina",
                       "subtitle":"3er puesto",
-                      "description":"Participación llevada a cabo durante el año 2022",
+                      "description":"Confección de algoritmos eficientes en C++, con complejidad asintótica óptima. Procesamiento de grandes volúmenes de datos bajo restricciones de tiempo. Participación llevada a cabo durante el año 2022 (medalla de Bronce)",
                       "extraInfo": "2022",
                       "imgSrc": "assets/images/oia.png",
                       "linkIndex": "oia"}
@@ -84,9 +84,9 @@ export class PortfolioComponent implements OnInit {
                     "extraInfo": "Marzo 2022 - Noviembre 2022",
                     "imgSrc": "assets/images/ConnectFour.png",
                     "linkIndex": "connectfour"},
-                   {"title":"A un paso del mundial",
+                   {"title":"A un paso del Mundial",
                     "subtitle":"Proyecto llevado adelante en el cursado del secundario, en grupos de 4 personas",
-                    "description":"Creación de un sitio web ficticio que permitiera visualizar los resultados del mundial Qatar 2022 y realizar diferentes predicciones.",
+                    "description":"Creación de un sitio web ficticio para visualizar los resultados del mundial Qatar 2022 y realizar diferentes predicciones. Posterior incorporación de React al Frontend.",
                     "extraInfo": "Marzo 2022 - Noviembre 2022",
                     "imgSrc": "assets/images/qatar2022.png",
                     "linkIndex": "qatar"}
@@ -95,7 +95,7 @@ export class PortfolioComponent implements OnInit {
 
               "skillsData": {
                 "softSkillsData": [{
-                    "percentage": 85,
+                    "percentage": 90,
                     "description": "Comunicación efectiva"
                 },{
                     "percentage": 90,
