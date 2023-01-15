@@ -10,13 +10,25 @@
         <div>
             <mat-form-field appearance="fill" class="my-textarea-field">
                 <mat-label for="profession">Profesión</mat-label>
-                <textarea matInput type="profession" formControlName="profession" aria-describedby="professionHelp" placeholder="Profesión" class="my-textarea"></textarea>
+                <input matInput type="profession" formControlName="profession" aria-describedby="professionHelp" placeholder="Profesión" class="my-textarea">
             </mat-form-field>
         </div>
         <div>
             <mat-form-field appearance="fill">
                 <mat-label for="aboutText">Acerca de</mat-label>
-                <textarea matInput type="aboutText" formControlName="aboutText" id="aboutTextnput" aria-describedby="aboutTextHelp" placeholder="Acerca de"></textarea>
+                <textarea matInput type="aboutText" formControlName="aboutText" id="aboutTextInput" aria-describedby="aboutTextHelp" placeholder="Acerca de"></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label for="profilePicSrc">Link a foto de perfil</mat-label>
+                <input matInput type="profilePicSrc" formControlName="profilePicSrc" id="profilePicSrcnput" aria-describedby="profilePicSrcHelp" placeholder="Link a foto de perfil">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label for="bannerSrc">Link a foto del banner</mat-label>
+                <input matInput type="bannerSrc" formControlName="bannerSrc" id="bannerSrcnput" aria-describedby="bannerSrcHelp" placeholder="Link a foto del banner">
             </mat-form-field>
         </div>
     </form>

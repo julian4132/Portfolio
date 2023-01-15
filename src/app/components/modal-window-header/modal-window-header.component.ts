@@ -17,7 +17,9 @@ export class ModalWindowHeaderComponent implements OnInit {
                 this.form=this.formBuilder.group({
                   fullName: [data.fullName, []],
                   profession: [data.profession, []],
-                  aboutText: [data.aboutText, []]
+                  aboutText: [data.aboutText, []],
+                  profilePicSrc:[data.profilePicSrc, []],
+                  bannerSrc:[data.bannerSrc, []],
                 })
               }
 

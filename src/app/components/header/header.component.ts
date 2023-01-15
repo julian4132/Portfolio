@@ -11,6 +11,8 @@ export interface headerData{
   fullName:string;
   profession:string;
   aboutText:string;
+  profilePicSrc:string;
+  bannerSrc:string
 }
 
 @Component({
@@ -23,7 +25,9 @@ export class HeaderComponent implements OnInit {
   @Input() headerData:headerData={
                        "fullName":"",
                        "profession":"",
-                       "aboutText":""
+                       "aboutText":"",
+                       "profilePicSrc":"",
+                       "bannerSrc":""
                        };
 
   constructor(private route:Router, private logOutService:LogOutService, public dialog:MatDialog, private updateDataService:UpdatePortfolioDataService) { }
