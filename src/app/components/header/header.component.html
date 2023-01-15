@@ -13,11 +13,11 @@
       </div>
       <div style="display: flex; float: right">
         <div href="#" class="fa fa-linkedin social-icon"></div>
-        <p class="social-icon-text">proximamentesoloencines</p>
+        <a class="social-icon-text" href="https://www.linkedin.com/in/julián-máximo-cabrera-430406262" target="_blank">Ver perfil de LinkedIn</a>
       </div>
       <div style="display: flex; float: right">
         <div href="#" class="fa fa-github social-icon"></div>
-        <p class="social-icon-text">julian4132</p>
+        <a class="social-icon-text" href="https://github.com/julian4132" target="_blank">julian4132</a>
       </div>
     </div>
       
@@ -42,7 +42,7 @@
           <hr>
           <h1 class="section-title">Acerca de</h1>
           <p class="about-text">{{headerData.aboutText}}</p>
-          <div class="item-button">
+          <div *ngIf="isLoggedIn()" class="item-button">
             <button mat-mini-fab (click)="openHeaderDialog()"><mat-icon>edit</mat-icon></button>
           </div>
         </div>

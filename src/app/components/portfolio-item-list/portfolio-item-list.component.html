@@ -3,7 +3,7 @@
     <!--<div class="example-box" *ngFor="let item of items, index as i" cdkDrag>
     <app-portfolio-item [props]="item"></app-portfolio-item>
     </div>-->
-    <div class="item-button">
+    <div *ngIf="isLoggedIn()" class="item-button">
         <button mat-mini-fab (click)="openCreateDialog()"><mat-icon>add</mat-icon></button>
     </div>
 

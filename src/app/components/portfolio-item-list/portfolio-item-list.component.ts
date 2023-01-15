@@ -82,4 +82,8 @@ export class PortfolioItemListComponent implements OnInit {
     this.items[i]=event;
     this.updateDataService.Update({experienceData: {[this.identifier]: this.items}});
   }
+
+  isLoggedIn():boolean{
+    return sessionStorage.getItem('currentUser')!=null;
+  }
 }

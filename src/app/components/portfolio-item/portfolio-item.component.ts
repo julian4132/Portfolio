@@ -63,6 +63,10 @@ export class PortfolioItemComponent implements OnInit {
     })
   }
 
+  isLoggedIn(){
+    return sessionStorage.getItem('currentUser')!=null;
+  }
+
   ngOnInit(): void {
   }
 

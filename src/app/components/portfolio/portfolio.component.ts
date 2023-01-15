@@ -36,7 +36,7 @@ export class PortfolioComponent implements OnInit {
                     "description":"Llevado adelante en el marco del programa de prácticas profesionales del Instituto Politécnico. Integración a un equipo de trabajo e interacción directa con el cliente.",
                     "extraInfo": "Junio 2022 - Noviembre 2022\n\nPráctica Profesional",
                     "imgSrc": "assets/images/logodonmarca.png",
-                    "linkIndex": "hoola"}
+                    "linkIndex": ""}
                     ],
                   "educationData":
                     [{"title":"Instituto Politécnico Superior",
@@ -46,46 +46,64 @@ export class PortfolioComponent implements OnInit {
                     "imgSrc": "assets/images/logo_poli.png",
                     "linkIndex": ""}],
                   "awardsData":
-                    [{"title":"Profile",
-                      "subtitle":"Desarrollador fullstack - Práctica profesional",
-                      "description":"Completar",
-                      "extraInfo": "Junio 2022 - Noviembre 2022",
-                      "imgSrc": "assets/images/logo-profile2.png",
-                      "linkIndex": ""},
-                     {"title":"Profile",
-                      "subtitle":"Desarrollador fullstack - Práctica profesional",
-                      "description":"Completar",
-                      "extraInfo": "Junio 2022 - Noviembre 2022",
-                      "imgSrc": "assets/images/logo-profile2.png",
-                      "linkIndex": ""}
+                    [{"title":"Olimpíada Internacional de Matemática",
+                      "subtitle":"Bronce (2019, 2020), Plata (2021, 2022)",
+                      "description":"Participaciones llevadas a cabo en los años 2019 (Inglaterra), 2020 (Rusia, virtual), 2021 (Rusia, virtual) y 2022 (Noruega), obteniendo dos medallas de bronce y luego dos de plata",
+                      "extraInfo": "2019, 2020, 2021, 2022",
+                      "imgSrc": "assets/images/IMOOslo.png",
+                      "linkIndex": "imo"},
+                     {"title":"Olimpíada Iberoamericana de Matemática",
+                      "subtitle":"Oro (2020, 2021) - puntaje perfecto",
+                      "description":"Participaciones llevadas a cabo en los años 2020 (Perú, virtual) y 2021 (Costa Rica, virtual)",
+                      "extraInfo": "2020, 2021",
+                      "imgSrc": "assets/images/IberoCostaRica.jpg",
+                      "linkIndex": "ibero"},
+                      {"title":"UdeSA AI Challenge",
+                      "subtitle":"3er puesto",
+                      "description":"Competencia en equipos de 4 personas enfocada hacia el desarrollo de un equipo jugador de fútbol NPC en Unity, que compite en un torneo contra los desarrollados por otros equipos participantes.",
+                      "extraInfo": "2022",
+                      "imgSrc": "assets/images/AIChallenge.jpg",
+                      "linkIndex": "ai"},
+                      {"title":"Olimpíada Informática Argentina",
+                      "subtitle":"3er puesto",
+                      "description":"Participación llevada a cabo durante el año 2022",
+                      "extraInfo": "2022",
+                      "imgSrc": "assets/images/oia.png",
+                      "linkIndex": "oia"}
                       ],
                   "projectsData":
-                  [{"title":"Profile",
-                    "subtitle":"Desarrollador fullstack - Práctica profesional",
-                    "description":"Completar",
-                    "extraInfo": "Junio 2022 - Noviembre 2022",
-                    "imgSrc": "assets/images/logo-profile2.png",
-                    "linkIndex": ""},
-                   {"title":"Profile",
-                    "subtitle":"Desarrollador fullstack - Práctica profesional",
-                    "description":"Completar",
-                    "extraInfo": "Junio 2022 - Noviembre 2022",
-                    "imgSrc": "assets/images/logo-profile2.png",
-                    "linkIndex": ""},
-                   {"title":"Profile",
-                    "subtitle":"Desarrollador fullstack - Práctica profesional",
-                    "description":"Completar",
-                    "extraInfo": "Junio 2022 - Noviembre 2022",
-                    "imgSrc": "assets/images/logo-profile2.png",
-                    "linkIndex": ""}
+                  [{"title":"Portfolio Web",
+                    "subtitle":"Proyecto final de Argentina Programa",
+                    "description":"Creación de un portfolio web, desarrollando el frontend en Angular y el backend en Spring Boot.",
+                    "extraInfo": "Junio 2022 - Enero 2023",
+                    "imgSrc": "assets/images/APLogo.png",
+                    "linkIndex": "argprog"},
+                   {"title":"Cuatro en línea",
+                    "subtitle":"Proyecto llevado adelante en el cursado del secundario",
+                    "description":"Desarrollo de una app web en Laravel que permite al usuario jugar al cuatro en línea. Soporta modo multijugador, y modo de un solo jugador con dificultad configurable.",
+                    "extraInfo": "Marzo 2022 - Noviembre 2022",
+                    "imgSrc": "assets/images/ConnectFour.png",
+                    "linkIndex": "connectfour"},
+                   {"title":"A un paso del mundial",
+                    "subtitle":"Proyecto llevado adelante en el cursado del secundario, en grupos de 4 personas",
+                    "description":"Creación de un sitio web ficticio que permitiera visualizar los resultados del mundial Qatar 2022 y realizar diferentes predicciones.",
+                    "extraInfo": "Marzo 2022 - Noviembre 2022",
+                    "imgSrc": "assets/images/qatar2022.png",
+                    "linkIndex": "qatar"}
                   ]
               },
 
               "skillsData": {
                 "softSkillsData": [{
-                    "percentage": 80,
-                    "description": "de efectividad"
-                }],
+                    "percentage": 85,
+                    "description": "Comunicación efectiva"
+                },{
+                    "percentage": 90,
+                    "description": "Resolución de problemas"
+                },{
+                    "percentage": 90,
+                    "description": "Pensamiento crítico"
+              }],
                 "languagesData": [{
                     "percentage": 100,
                     "description": "Español"
