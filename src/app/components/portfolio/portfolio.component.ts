@@ -74,7 +74,7 @@ export class PortfolioComponent implements OnInit {
                   "projectsData":
                   [{"title":"Portfolio Web",
                     "subtitle":"Proyecto final de Argentina Programa",
-                    "description":"Creación de un portfolio web, desarrollando el frontend en Angular y el backend en Spring Boot.",
+                    "description":"Creación de un portfolio web, desarrollando el frontend en Angular y el backend en Spring Boot. Autenticación con JWT. OAuth 2.0.",
                     "extraInfo": "Junio 2022 - Enero 2023",
                     "imgSrc": "assets/images/APLogo.png",
                     "linkIndex": "argprog"},
