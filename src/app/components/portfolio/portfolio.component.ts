@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchPortfolioDataService } from 'src/app/services/fetch-portfolio-data.service';
+import { PublicDataService } from 'src/app/services/public-data.service';
 import { headerData } from '../header/header.component';
 import { PortfolioItemInfo } from '../portfolio-item/portfolio-item.component';
 import { RoundProgressInfo } from '../round-progress/round-progress.component';
@@ -115,7 +116,7 @@ export class PortfolioComponent implements OnInit {
               
             };
     
-  constructor(private dataService:FetchPortfolioDataService) {}
+  constructor(private dataService:FetchPortfolioDataService, private publicDataService:PublicDataService) {}
 
   ngOnInit(): void {
     if(sessionStorage.getItem('currentUser')){
@@ -125,6 +126,12 @@ export class PortfolioComponent implements OnInit {
           this.portfolioData=data;
         }
       );
+    }
+    else{
+      this.publicDataService.fetchData().subscribe(data => {
+        console.log(data);
+        this.portfolioData=data;
+      })
     }
   }
 
