@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, timeout } from 'rxjs';
 import { Constants } from '../common/global-constants/global-constants';
 
 @Injectable({
@@ -11,6 +11,8 @@ export class PublicDataService {
   constructor(private http:HttpClient) {}
 
   fetchData():Observable<any>{
-    return this.http.post(this.url, "");
+    return this.http.post("https://jsonplaceholder.typicode.com/posts", "").pipe(
+      timeout(10)
+    );
   }
 }

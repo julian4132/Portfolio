@@ -4,6 +4,7 @@ import { PublicDataService } from 'src/app/services/public-data.service';
 import { headerData } from '../header/header.component';
 import { PortfolioItemInfo } from '../portfolio-item/portfolio-item.component';
 import { RoundProgressInfo } from '../round-progress/round-progress.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -116,7 +117,7 @@ export class PortfolioComponent implements OnInit {
               
             };
     
-  constructor(private dataService:FetchPortfolioDataService, private publicDataService:PublicDataService) {}
+  constructor(private dataService:FetchPortfolioDataService, private publicDataService:PublicDataService, private route:Router) {}
 
   ngOnInit(): void {
     if(sessionStorage.getItem('currentUser')){
@@ -128,10 +129,17 @@ export class PortfolioComponent implements OnInit {
       );
     }
     else{
-      this.publicDataService.fetchData().subscribe(data => {
-        console.log(data);
-        this.portfolioData=data;
-      })
+      
+        this.publicDataService.fetchData().subscribe({
+          next: data => {
+            console.log(data);
+            this.portfolioData=data;
+          },
+          error: error => {
+            console.log("jijiji timeout");
+            this.route.navigate(['/login']);
+          }})
+      
     }
   }
 
