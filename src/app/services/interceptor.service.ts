@@ -4,6 +4,7 @@ import { AuthService } from './auth.service';
 import { catchError, Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators'
 import { UpdateDataService } from './update-data.service';
+import { Constants } from '../common/global-constants/global-constants';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class InterceptorService implements HttpInterceptor {
     }
     console.log("Soy Interceptor, "+JSON.stringify(currentUser));
     return next.handle(req).pipe(catchError( err => {
-      if(err instanceof HttpErrorResponse && err.status===401){
+      if(err instanceof HttpErrorResponse && err.status===401 && err.url!=Constants.API_ENDPOINT+"/refreshtoken"){
         return this.refreshService.refreshToken().pipe(switchMap(tokens => {
           currentUser = JSON.parse(sessionStorage.getItem('currentUser') || '{}');
           console.log("Intenté con "+currentUser.token);
