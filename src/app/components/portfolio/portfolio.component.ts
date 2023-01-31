@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class PortfolioComponent implements OnInit {
 
+  loaded:boolean=false;
   portfolioData:{headerData:headerData,
                 experienceData:{
                   experienceData:PortfolioItemInfo[],
@@ -125,19 +126,19 @@ export class PortfolioComponent implements OnInit {
         data => {
           console.log(data);
           this.portfolioData=data;
+          this.loaded=true;
         }
       );
     }
     else{
-      
         this.publicDataService.fetchData().subscribe({
           next: data => {
             console.log(data);
             this.portfolioData=data;
+            this.loaded=true;
           },
           error: error => {
-            console.log("jijiji timeout");
-            this.route.navigate(['/login']);
+            this.route.navigate(['/timeout']);
           }})
       
     }

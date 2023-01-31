@@ -1,3 +1,4 @@
+<div *ngIf="loaded">
 <app-header [headerData]="portfolioData.headerData"></app-header>
 <app-experience [experienceProps]="portfolioData.experienceData.experienceData"></app-experience>
 <app-education [educationProps]="portfolioData.experienceData.educationData"></app-education>
@@ -5,3 +6,4 @@
 <app-softskills [softSkillsProps]="portfolioData.skillsData.softSkillsData"></app-softskills>
 <app-projects [projectsProps]="portfolioData.experienceData.projectsData"></app-projects>
 <app-awards [awardsProps]="portfolioData.experienceData.awardsData"></app-awards>
+</div>

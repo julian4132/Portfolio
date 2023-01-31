@@ -11,8 +11,8 @@ export class PublicDataService {
   constructor(private http:HttpClient) {}
 
   fetchData():Observable<any>{
-    return this.http.post("https://jsonplaceholder.typicode.com/posts", "").pipe(
-      timeout(10)
+    return this.http.post(this.url, "").pipe(
+      timeout(2500)
     );
   }
 }
